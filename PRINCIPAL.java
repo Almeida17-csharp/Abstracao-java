@@ -1,467 +1,227 @@
+package br.edu.fatecpg.abstracao.view;
+
+import br.edu.fatecpg.abstracao.model.Pessoas;
+
+import java.util.Scanner;
 
 public class Principal {
 
     public static void main(String[] args) {
-
-        System.out.println("==== PROFESSOR ====");
-        Professor professor1 = new Professor("Joao", "Matematica", 35, 10);
-        Professor professor2 = new Professor("Maria", "Historia", 40, 15);
-        System.out.println(professor1.nome);
-        professor1.ensinar();
-        System.out.println(professor2.nome);
-        professor2.corrigir();
-
-        System.out.println("==== ESTUDANTE ====");
-        Estudante estudante1 = new Estudante("Carlos", 20, "DSM", 8.5);
-        Estudante estudante2 = new Estudante("Ana", 19, "Direito", 9.0);
-        System.out.println(estudante1.nome);
-        estudante1.estudar();
-        System.out.println(estudante2.nome);
-        estudante2.fazerProva();
-
-        System.out.println("==== MEDICO ====");
-        Medico medico1 = new Medico("Pedro", "Cardiologia", 35, "CRM123");
-        Medico medico2 = new Medico("Julia", "Pediatria", 30, "CRM456");
-        System.out.println(medico1.nome);
-        medico1.consultar();
-        System.out.println(medico2.nome);
-        medico2.diagnosticar();
-
-        System.out.println("==== ENGENHEIRO ====");
-        Engenheiro engenheiro1 = new Engenheiro("Lucas", "Civil", 28, 5);
-        Engenheiro engenheiro2 = new Engenheiro("Laura", "Software", 30, 7);
-        System.out.println(engenheiro1.nome);
-        engenheiro1.projetar();
-        System.out.println(engenheiro2.nome);
-        engenheiro2.calcular();
-
-        System.out.println("==== ATOR ====");
-        Ator ator1 = new Ator("Rafael", 25, "Drama", 10);
-        Ator ator2 = new Ator("Beatriz", 28, "Comedia", 8);
-        System.out.println(ator1.nome);
-        ator1.atuar();
-        System.out.println(ator2.nome);
-        ator2.ensaiar();
-
-        System.out.println("==== CANTOR ====");
-        Cantor cantor1 = new Cantor("Felipe", "Pop", 25, 3);
-        Cantor cantor2 = new Cantor("Marina", "Rock", 30, 5);
-        System.out.println(cantor1.nome);
-        cantor1.cantar();
-        System.out.println(cantor2.nome);
-        cantor2.apresentar();
-
-        System.out.println("==== POLICIAL ====");
-        Policial policial1 = new Policial("Bruno", 32, "Civil", 8);
-        Policial policial2 = new Policial("Camila", 29, "Militar", 6);
-        System.out.println(policial1.nome);
-        policial1.patrulhar();
-        System.out.println(policial2.nome);
-        policial2.investigar();
-
-        System.out.println("==== BOMBEIRO ====");
-        Bombeiro bombeiro1 = new Bombeiro("Andre", 35, 10, "Resgate");
-        Bombeiro bombeiro2 = new Bombeiro("Paula", 30, 7, "Incendio");
-        System.out.println(bombeiro1.nome);
-        bombeiro1.resgatar();
-        System.out.println(bombeiro2.nome);
-        bombeiro2.apagarIncendio();
-
-        System.out.println("==== MOTORISTA ====");
-        Motorista motorista1 = new Motorista("Diego", 40, "B", 15);
-        Motorista motorista2 = new Motorista("Sofia", 25, "D", 5);
-        System.out.println(motorista1.nome);
-        motorista1.dirigir();
-        System.out.println(motorista2.nome);
-        motorista2.frear();
-
-        System.out.println("==== PILOTO ====");
-        Piloto piloto1 = new Piloto("Gustavo", 38, 2000, "Comercial");
-        Piloto piloto2 = new Piloto("Isabela", 32, 1500, "Militar");
-        System.out.println(piloto1.nome);
-        piloto1.decolar();
-        System.out.println(piloto2.nome);
-        piloto2.pousar();
-
-        System.out.println("==== ADVOGADO ====");
-        Advogado advogado1 = new Advogado("Henrique", "Civil", 35, 12);
-        Advogado advogado2 = new Advogado("Clara", "Penal", 30, 8);
-        System.out.println(advogado1.nome);
-        advogado1.defender();
-        System.out.println(advogado2.nome);
-        advogado2.argumentar();
-
-        System.out.println("==== JUIZ ====");
-        Juiz juiz1 = new Juiz("Roberto", 50, "Criminal", 20);
-        Juiz juiz2 = new Juiz("Helena", 45, "Civil", 15);
-        System.out.println(juiz1.nome);
-        juiz1.julgar();
-        System.out.println(juiz2.nome);
-        juiz2.sentenciar();
-
-        System.out.println("==== ARQUITETO ====");
-        Arquiteto arquiteto1 = new Arquiteto("Thiago", 30, "Residencial", 6);
-        Arquiteto arquiteto2 = new Arquiteto("Amanda", 28, "Comercial", 5);
-        System.out.println(arquiteto1.nome);
-        arquiteto1.desenhar();
-        System.out.println(arquiteto2.nome);
-        arquiteto2.planejar();
-
-        System.out.println("==== CIENTISTA ====");
-        Cientista cientista1 = new Cientista("Eduardo", "Fisica", 40, 15);
-        Cientista cientista2 = new Cientista("Bianca", "Quimica", 35, 10);
-        System.out.println(cientista1.nome);
-        cientista1.pesquisar();
-        System.out.println(cientista2.nome);
-        cientista2.experimentar();
-
-        System.out.println("==== PINTOR ====");
-        Pintor pintor1 = new Pintor("Antonio", "Oleo", 45, 20);
-        Pintor pintor2 = new Pintor("Luiza", "Aquarela", 25, 5);
-        System.out.println(pintor1.nome);
-        pintor1.pintar();
-        System.out.println(pintor2.nome);
-        pintor2.criarArte();
-
-        System.out.println("==== FOTOGRAFO ====");
-        Fotografo fotografo1 = new Fotografo("Victor", "Retrato", 30, 8);
-        Fotografo fotografo2 = new Fotografo("Natalia", "Natureza", 28, 6);
-        System.out.println(fotografo1.nome);
-        fotografo1.fotografar();
-        System.out.println(fotografo2.nome);
-        fotografo2.editar();
-
-        System.out.println("==== JORNALISTA ====");
-        Jornalista jornalista1 = new Jornalista("Daniel", "Politica", 35, 12);
-        Jornalista jornalista2 = new Jornalista("Carolina", "Esportes", 29, 7);
-        System.out.println(jornalista1.nome);
-        jornalista1.investigar();
-        System.out.println(jornalista2.nome);
-        jornalista2.escrever();
-
-        System.out.println("==== ATLETA ====");
-        Atleta atleta1 = new Atleta("Matheus", "Futebol", 22, 10);
-        Atleta atleta2 = new Atleta("Julia", "Natacao", 20, 8);
-        System.out.println(atleta1.nome);
-        atleta1.treinar();
-        System.out.println(atleta2.nome);
-        atleta2.competir();
-
-        System.out.println("==== POLITICO ====");
-        Politico politico1 = new Politico("Fernando", "Vereador", 45, "Partido A");
-        Politico politico2 = new Politico("Renata", "Deputada", 40, "Partido B");
-        System.out.println(politico1.nome);
-        politico1.proporLei();
-        System.out.println(politico2.nome);
-        politico2.debater();
-
-        System.out.println("==== PROGRAMADOR ====");
-        Programador programador1 = new Programador("Marcelo", "Java", 20, 2);
-        Programador programador2 = new Programador("Gabriel", "Python", 22, 3);
-        System.out.println(programador1.nome);
-        programador1.programar();
-        System.out.println(programador2.nome);
-        programador2.testar();
-    }
-}
-
-class Professor {
-    String nome, disciplina;
-    int idade, experiencia;
-
-    Professor(String nome, String disciplina, int idade, int experiencia) {
-        this.nome = nome;
-        this.disciplina = disciplina;
-        this.idade = idade;
-        this.experiencia = experiencia;
+        executar(new Scanner(System.in));
     }
 
-    void ensinar() { System.out.println("Ensinando."); }
-    void corrigir() { System.out.println("Corrigindo provas."); }
-}
+    public static void executar(Scanner scan) {
+        Pessoas.Professor professor1 = new Pessoas.Professor("Joao", "Matematica", 35, 10);
+        Pessoas.Professor professor2 = new Pessoas.Professor("Maria", "Historia", 40, 15);
+        Pessoas.Estudante estudante1 = new Pessoas.Estudante("Carlos", 20, "DSM", 8.5);
+        Pessoas.Estudante estudante2 = new Pessoas.Estudante("Ana", 19, "ADS", 9.0);
+        Pessoas.Medico medico1 = new Pessoas.Medico("Pedro", "Cardiologia", 35, "CRM123");
+        Pessoas.Medico medico2 = new Pessoas.Medico("Julia", "Pediatria", 30, "CRM456");
+        Pessoas.Engenheiro engenheiro1 = new Pessoas.Engenheiro("Lucas", "Civil", 28, 5);
+        Pessoas.Engenheiro engenheiro2 = new Pessoas.Engenheiro("Laura", "Software", 30, 7);
+        Pessoas.Ator ator1 = new Pessoas.Ator("Rafael", 25, "Drama", 10);
+        Pessoas.Ator ator2 = new Pessoas.Ator("Beatriz", 28, "Comedia", 8);
+        Pessoas.Cantor cantor1 = new Pessoas.Cantor("Felipe", "Pop", 25, 3);
+        Pessoas.Cantor cantor2 = new Pessoas.Cantor("Marina", "Rock", 30, 5);
+        Pessoas.Policial policial1 = new Pessoas.Policial("Bruno", 32, "Civil", 8);
+        Pessoas.Policial policial2 = new Pessoas.Policial("Camila", 29, "Militar", 6);
+        Pessoas.Bombeiro bombeiro1 = new Pessoas.Bombeiro("Andre", 35, 10, "Resgate");
+        Pessoas.Bombeiro bombeiro2 = new Pessoas.Bombeiro("Paula", 30, 7, "Incendio");
+        Pessoas.Motorista motorista1 = new Pessoas.Motorista("Diego", 40, "B", 15);
+        Pessoas.Motorista motorista2 = new Pessoas.Motorista("Sofia", 25, "D", 5);
+        Pessoas.Piloto piloto1 = new Pessoas.Piloto("Gustavo", 38, 2000, "Comercial");
+        Pessoas.Piloto piloto2 = new Pessoas.Piloto("Isabela", 32, 1500, "Militar");
+        Pessoas.Advogado advogado1 = new Pessoas.Advogado("Henrique", "Civil", 35, 12);
+        Pessoas.Advogado advogado2 = new Pessoas.Advogado("Clara", "Penal", 30, 8);
+        Pessoas.Juiz juiz1 = new Pessoas.Juiz("Roberto", 50, "Criminal", 20);
+        Pessoas.Juiz juiz2 = new Pessoas.Juiz("Helena", 45, "Civil", 15);
+        Pessoas.Arquiteto arquiteto1 = new Pessoas.Arquiteto("Thiago", 30, "Residencial", 6);
+        Pessoas.Arquiteto arquiteto2 = new Pessoas.Arquiteto("Amanda", 28, "Comercial", 5);
+        Pessoas.Cientista cientista1 = new Pessoas.Cientista("Eduardo", "Fisica", 40, 15);
+        Pessoas.Cientista cientista2 = new Pessoas.Cientista("Bianca", "Quimica", 35, 10);
+        Pessoas.Pintor pintor1 = new Pessoas.Pintor("Antonio", "Oleo", 45, 20);
+        Pessoas.Pintor pintor2 = new Pessoas.Pintor("Luiza", "Aquarela", 25, 5);
+        Pessoas.Fotografo fotografo1 = new Pessoas.Fotografo("Victor", "Retrato", 30, 8);
+        Pessoas.Fotografo fotografo2 = new Pessoas.Fotografo("Natalia", "Natureza", 28, 6);
+        Pessoas.Jornalista jornalista1 = new Pessoas.Jornalista("Daniel", "Politica", 35, 12);
+        Pessoas.Jornalista jornalista2 = new Pessoas.Jornalista("Carolina", "Esportes", 29, 7);
+        Pessoas.Atleta atleta1 = new Pessoas.Atleta("Matheus", "Futebol", 22, 10);
+        Pessoas.Atleta atleta2 = new Pessoas.Atleta("Julia", "Natacao", 20, 8);
+        Pessoas.Politico politico1 = new Pessoas.Politico("Fernando", "Vereador", 45, "Partido A");
+        Pessoas.Politico politico2 = new Pessoas.Politico("Renata", "Deputada", 40, "Partido B");
+        Pessoas.Programador programador1 = new Pessoas.Programador("Marcelo", "Java", 20, 2);
+        Pessoas.Programador programador2 = new Pessoas.Programador("Gabriel", "Python", 22, 3);
+        int opcao;
 
-class Estudante {
-    String nome, curso;
-    int idade;
-    double nota;
+        do {
+            listarPessoas(professor1, professor2, estudante1, estudante2, medico1, medico2,
+                    engenheiro1, engenheiro2, ator1, ator2, cantor1, cantor2, policial1, policial2,
+                    bombeiro1, bombeiro2, motorista1, motorista2, piloto1, piloto2, advogado1,
+                    advogado2, juiz1, juiz2, arquiteto1, arquiteto2, cientista1, cientista2,
+                    pintor1, pintor2, fotografo1, fotografo2, jornalista1, jornalista2, atleta1,
+                    atleta2, politico1, politico2, programador1, programador2);
+            System.out.println("0 - Voltar ao menu principal");
+            System.out.print("Escolha uma profissão: ");
+            opcao = scan.nextInt();
+            scan.nextLine();
 
-    Estudante(String nome, int idade, String curso, double nota) {
-        this.nome = nome;
-        this.idade = idade;
-        this.curso = curso;
-        this.nota = nota;
+            switch (opcao) {
+                case 1:
+                    mostrar("Professor", professor1.nome, professor2.nome);
+                    professor1.ensinar();
+                    professor2.corrigir();
+                    break;
+                case 2:
+                    mostrar("Estudante", estudante1.nome, estudante2.nome);
+                    estudante1.estudar();
+                    estudante2.fazerProva();
+                    break;
+                case 3:
+                    mostrar("Medico", medico1.nome, medico2.nome);
+                    medico1.consultar();
+                    medico2.diagnosticar();
+                    break;
+                case 4:
+                    mostrar("Engenheiro", engenheiro1.nome, engenheiro2.nome);
+                    engenheiro1.projetar();
+                    engenheiro2.calcular();
+                    break;
+                case 5:
+                    mostrar("Ator", ator1.nome, ator2.nome);
+                    ator1.atuar();
+                    ator2.ensaiar();
+                    break;
+                case 6:
+                    mostrar("Cantor", cantor1.nome, cantor2.nome);
+                    cantor1.cantar();
+                    cantor2.apresentar();
+                    break;
+                case 7:
+                    mostrar("Policial", policial1.nome, policial2.nome);
+                    policial1.patrulhar();
+                    policial2.investigar();
+                    break;
+                case 8:
+                    mostrar("Bombeiro", bombeiro1.nome, bombeiro2.nome);
+                    bombeiro1.resgatar();
+                    bombeiro2.apagarIncendio();
+                    break;
+                case 9:
+                    mostrar("Motorista", motorista1.nome, motorista2.nome);
+                    motorista1.dirigir();
+                    motorista2.frear();
+                    break;
+                case 10:
+                    mostrar("Piloto", piloto1.nome, piloto2.nome);
+                    piloto1.decolar();
+                    piloto2.pousar();
+                    break;
+                case 11:
+                    mostrar("Advogado", advogado1.nome, advogado2.nome);
+                    advogado1.defender();
+                    advogado2.argumentar();
+                    break;
+                case 12:
+                    mostrar("Juiz", juiz1.nome, juiz2.nome);
+                    juiz1.julgar();
+                    juiz2.sentenciar();
+                    break;
+                case 13:
+                    mostrar("Arquiteto", arquiteto1.nome, arquiteto2.nome);
+                    arquiteto1.desenhar();
+                    arquiteto2.planejar();
+                    break;
+                case 14:
+                    mostrar("Cientista", cientista1.nome, cientista2.nome);
+                    cientista1.pesquisar();
+                    cientista2.experimentar();
+                    break;
+                case 15:
+                    mostrar("Pintor", pintor1.nome, pintor2.nome);
+                    pintor1.pintar();
+                    pintor2.criarArte();
+                    break;
+                case 16:
+                    mostrar("Fotografo", fotografo1.nome, fotografo2.nome);
+                    fotografo1.fotografar();
+                    fotografo2.editar();
+                    break;
+                case 17:
+                    mostrar("Jornalista", jornalista1.nome, jornalista2.nome);
+                    jornalista1.investigar();
+                    jornalista2.escrever();
+                    break;
+                case 18:
+                    mostrar("Atleta", atleta1.nome, atleta2.nome);
+                    atleta1.treinar();
+                    atleta2.competir();
+                    break;
+                case 19:
+                    mostrar("Politico", politico1.nome, politico2.nome);
+                    politico1.proporLei();
+                    politico2.debater();
+                    break;
+                case 20:
+                    mostrar("Programador", programador1.nome, programador2.nome);
+                    programador1.programar();
+                    programador2.testar();
+                    break;
+                case 0:
+                    System.out.println("Voltando ao menu principal...\n");
+                    break;
+                default:
+                    System.out.println("Digite um número válido.\n");
+            }
+        } while (opcao != 0);
     }
 
-    void estudar() { System.out.println("Estudando."); }
-    void fazerProva() { System.out.println("Fazendo prova."); }
-}
-
-class Medico {
-    String nome, especialidade, crm;
-    int idade;
-
-    Medico(String nome, String especialidade, int idade, String crm) {
-        this.nome = nome;
-        this.especialidade = especialidade;
-        this.idade = idade;
-        this.crm = crm;
+    private static void listarPessoas(Pessoas.Professor professor1, Pessoas.Professor professor2,
+                                      Pessoas.Estudante estudante1, Pessoas.Estudante estudante2,
+                                      Pessoas.Medico medico1, Pessoas.Medico medico2,
+                                      Pessoas.Engenheiro engenheiro1, Pessoas.Engenheiro engenheiro2,
+                                      Pessoas.Ator ator1, Pessoas.Ator ator2,
+                                      Pessoas.Cantor cantor1, Pessoas.Cantor cantor2,
+                                      Pessoas.Policial policial1, Pessoas.Policial policial2,
+                                      Pessoas.Bombeiro bombeiro1, Pessoas.Bombeiro bombeiro2,
+                                      Pessoas.Motorista motorista1, Pessoas.Motorista motorista2,
+                                      Pessoas.Piloto piloto1, Pessoas.Piloto piloto2,
+                                      Pessoas.Advogado advogado1, Pessoas.Advogado advogado2,
+                                      Pessoas.Juiz juiz1, Pessoas.Juiz juiz2,
+                                      Pessoas.Arquiteto arquiteto1, Pessoas.Arquiteto arquiteto2,
+                                      Pessoas.Cientista cientista1, Pessoas.Cientista cientista2,
+                                      Pessoas.Pintor pintor1, Pessoas.Pintor pintor2,
+                                      Pessoas.Fotografo fotografo1, Pessoas.Fotografo fotografo2,
+                                      Pessoas.Jornalista jornalista1, Pessoas.Jornalista jornalista2,
+                                      Pessoas.Atleta atleta1, Pessoas.Atleta atleta2,
+                                      Pessoas.Politico politico1, Pessoas.Politico politico2,
+                                      Pessoas.Programador programador1, Pessoas.Programador programador2) {
+        System.out.println("\n==== PESSOAS, PROFISSÕES E FUNÇÕES ====");
+        System.out.println("1 - Professor: " + professor1.nome + " e " + professor2.nome + " | ensinar, corrigir");
+        System.out.println("2 - Estudante: " + estudante1.nome + " e " + estudante2.nome + " | estudar, fazer prova");
+        System.out.println("3 - Medico: " + medico1.nome + " e " + medico2.nome + " | consultar, diagnosticar");
+        System.out.println("4 - Engenheiro: " + engenheiro1.nome + " e " + engenheiro2.nome + " | projetar, calcular");
+        System.out.println("5 - Ator: " + ator1.nome + " e " + ator2.nome + " | atuar, ensaiar");
+        System.out.println("6 - Cantor: " + cantor1.nome + " e " + cantor2.nome + " | cantar, apresentar");
+        System.out.println("7 - Policial: " + policial1.nome + " e " + policial2.nome + " | patrulhar, investigar");
+        System.out.println("8 - Bombeiro: " + bombeiro1.nome + " e " + bombeiro2.nome + " | resgatar, apagar incendio");
+        System.out.println("9 - Motorista: " + motorista1.nome + " e " + motorista2.nome + " | dirigir, frear");
+        System.out.println("10 - Piloto: " + piloto1.nome + " e " + piloto2.nome + " | decolar, pousar");
+        System.out.println("11 - Advogado: " + advogado1.nome + " e " + advogado2.nome + " | defender, argumentar");
+        System.out.println("12 - Juiz: " + juiz1.nome + " e " + juiz2.nome + " | julgar, sentenciar");
+        System.out.println("13 - Arquiteto: " + arquiteto1.nome + " e " + arquiteto2.nome + " | desenhar, planejar");
+        System.out.println("14 - Cientista: " + cientista1.nome + " e " + cientista2.nome + " | pesquisar, experimentar");
+        System.out.println("15 - Pintor: " + pintor1.nome + " e " + pintor2.nome + " | pintar, criar arte");
+        System.out.println("16 - Fotografo: " + fotografo1.nome + " e " + fotografo2.nome + " | fotografar, editar");
+        System.out.println("17 - Jornalista: " + jornalista1.nome + " e " + jornalista2.nome + " | investigar, escrever");
+        System.out.println("18 - Atleta: " + atleta1.nome + " e " + atleta2.nome + " | treinar, competir");
+        System.out.println("19 - Politico: " + politico1.nome + " e " + politico2.nome + " | propor lei, debater");
+        System.out.println("20 - Programador: " + programador1.nome + " e " + programador2.nome + " | programar, testar");
     }
 
-    void consultar() { System.out.println("Realizando consulta."); }
-    void diagnosticar() { System.out.println("Realizando diagnostico."); }
-}
-
-class Engenheiro {
-    String nome, area;
-    int idade, experiencia;
-
-    Engenheiro(String nome, String area, int idade, int experiencia) {
-        this.nome = nome;
-        this.area = area;
-        this.idade = idade;
-        this.experiencia = experiencia;
+    private static void mostrar(String profissao, String nome1, String nome2) {
+        System.out.println("\n==== " + profissao.toUpperCase() + " ====");
+        System.out.println("Pessoa 1: " + nome1);
+        System.out.println("Pessoa 2: " + nome2);
+        System.out.println();
     }
-
-    void projetar() { System.out.println("Criando projeto."); }
-    void calcular() { System.out.println("Realizando calculos."); }
-}
-
-class Ator {
-    String nome, genero;
-    int idade, experiencia;
-
-    Ator(String nome, int idade, String genero, int experiencia) {
-        this.nome = nome;
-        this.idade = idade;
-        this.genero = genero;
-        this.experiencia = experiencia;
-    }
-
-    void atuar() { System.out.println("Atuando."); }
-    void ensaiar() { System.out.println("Ensaiando."); }
-}
-
-class Cantor {
-    String nome, estilo;
-    int idade, albuns;
-
-    Cantor(String nome, String estilo, int idade, int albuns) {
-        this.nome = nome;
-        this.estilo = estilo;
-        this.idade = idade;
-        this.albuns = albuns;
-    }
-
-    void cantar() { System.out.println("Cantando."); }
-    void apresentar() { System.out.println("Realizando apresentacao."); }
-}
-
-class Policial {
-    String nome, tipo;
-    int idade, experiencia;
-
-    Policial(String nome, int idade, String tipo, int experiencia) {
-        this.nome = nome;
-        this.idade = idade;
-        this.tipo = tipo;
-        this.experiencia = experiencia;
-    }
-
-    void patrulhar() { System.out.println("Patrulhando."); }
-    void investigar() { System.out.println("Investigando."); }
-}
-
-class Bombeiro {
-    String nome, especialidade;
-    int idade, experiencia;
-
-    Bombeiro(String nome, int idade, int experiencia, String especialidade) {
-        this.nome = nome;
-        this.idade = idade;
-        this.experiencia = experiencia;
-        this.especialidade = especialidade;
-    }
-
-    void resgatar() { System.out.println("Realizando resgate."); }
-    void apagarIncendio() { System.out.println("Apagando incendio."); }
-}
-
-class Motorista {
-    String nome, categoriaCNH;
-    int idade, experiencia;
-
-    Motorista(String nome, int idade, String categoriaCNH, int experiencia) {
-        this.nome = nome;
-        this.idade = idade;
-        this.categoriaCNH = categoriaCNH;
-        this.experiencia = experiencia;
-    }
-
-    void dirigir() { System.out.println("Dirigindo."); }
-    void frear() { System.out.println("Freando."); }
-}
-
-class Piloto {
-    String nome, tipo;
-    int idade, horasVoo;
-
-    Piloto(String nome, int idade, int horasVoo, String tipo) {
-        this.nome = nome;
-        this.idade = idade;
-        this.horasVoo = horasVoo;
-        this.tipo = tipo;
-    }
-
-    void decolar() { System.out.println("Decolando."); }
-    void pousar() { System.out.println("Pousando."); }
-}
-
-class Advogado {
-    String nome, area;
-    int idade, experiencia;
-
-    Advogado(String nome, String area, int idade, int experiencia) {
-        this.nome = nome;
-        this.area = area;
-        this.idade = idade;
-        this.experiencia = experiencia;
-    }
-
-    void defender() { System.out.println("Defendendo cliente."); }
-    void argumentar() { System.out.println("Apresentando argumentos."); }
-}
-
-class Juiz {
-    String nome, area;
-    int idade, experiencia;
-
-    Juiz(String nome, int idade, String area, int experiencia) {
-        this.nome = nome;
-        this.idade = idade;
-        this.area = area;
-        this.experiencia = experiencia;
-    }
-
-    void julgar() { System.out.println("Julgando processo."); }
-    void sentenciar() { System.out.println("Proferindo sentenca."); }
-}
-
-class Arquiteto {
-    String nome, especialidade;
-    int idade, experiencia;
-
-    Arquiteto(String nome, int idade, String especialidade, int experiencia) {
-        this.nome = nome;
-        this.idade = idade;
-        this.especialidade = especialidade;
-        this.experiencia = experiencia;
-    }
-
-    void desenhar() { System.out.println("Desenhando projeto."); }
-    void planejar() { System.out.println("Planejando construcao."); }
-}
-
-class Cientista {
-    String nome, area;
-    int idade, experiencia;
-
-    Cientista(String nome, String area, int idade, int experiencia) {
-        this.nome = nome;
-        this.area = area;
-        this.idade = idade;
-        this.experiencia = experiencia;
-    }
-
-    void pesquisar() { System.out.println("Realizando pesquisa."); }
-    void experimentar() { System.out.println("Realizando experimento."); }
-}
-
-class Pintor {
-    String nome, tecnica;
-    int idade, experiencia;
-
-    Pintor(String nome, String tecnica, int idade, int experiencia) {
-        this.nome = nome;
-        this.tecnica = tecnica;
-        this.idade = idade;
-        this.experiencia = experiencia;
-    }
-
-    void pintar() { System.out.println("Pintando."); }
-    void criarArte() { System.out.println("Criando obra de arte."); }
-}
-
-class Fotografo {
-    String nome, especialidade;
-    int idade, experiencia;
-
-    Fotografo(String nome, String especialidade, int idade, int experiencia) {
-        this.nome = nome;
-        this.especialidade = especialidade;
-        this.idade = idade;
-        this.experiencia = experiencia;
-    }
-
-    void fotografar() { System.out.println("Tirando fotografia."); }
-    void editar() { System.out.println("Editando fotografia."); }
-}
-
-class Jornalista {
-    String nome, area;
-    int idade, experiencia;
-
-    Jornalista(String nome, String area, int idade, int experiencia) {
-        this.nome = nome;
-        this.area = area;
-        this.idade = idade;
-        this.experiencia = experiencia;
-    }
-
-    void investigar() { System.out.println("Investigando noticia."); }
-    void escrever() { System.out.println("Escrevendo reportagem."); }
-}
-
-class Atleta {
-    String nome, esporte;
-    int idade, experiencia;
-
-    Atleta(String nome, String esporte, int idade, int experiencia) {
-        this.nome = nome;
-        this.esporte = esporte;
-        this.idade = idade;
-        this.experiencia = experiencia;
-    }
-
-    void treinar() { System.out.println("Realizando treinamento."); }
-    void competir() { System.out.println("Participando de competicao."); }
-}
-
-class Politico {
-    String nome, cargo, partido;
-    int idade;
-
-    Politico(String nome, String cargo, int idade, String partido) {
-        this.nome = nome;
-        this.cargo = cargo;
-        this.idade = idade;
-        this.partido = partido;
-    }
-
-    void proporLei() { System.out.println("Propondo lei."); }
-    void debater() { System.out.println("Participando de debate."); }
-}
-
-class Programador {
-    String nome, linguagem;
-    int idade, experiencia;
-
-    Programador(String nome, String linguagem, int idade, int experiencia) {
-        this.nome = nome;
-        this.linguagem = linguagem;
-        this.idade = idade;
-        this.experiencia = experiencia;
-    }
-
-    void programar() { System.out.println("Escrevendo codigo."); }
-    void testar() { System.out.println("Testando programa."); }
 }
