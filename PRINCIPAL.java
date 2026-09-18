@@ -175,7 +175,7 @@ public class Principal {
         } while (opcao != 0);
     }
 
-    private static void listarPessoas(Pessoas.Professor professor1, Pessoas.Professor professor2,
+    public static void listarPessoas(Pessoas.Professor professor1, Pessoas.Professor professor2,
                                       Pessoas.Estudante estudante1, Pessoas.Estudante estudante2,
                                       Pessoas.Medico medico1, Pessoas.Medico medico2,
                                       Pessoas.Engenheiro engenheiro1, Pessoas.Engenheiro engenheiro2,
